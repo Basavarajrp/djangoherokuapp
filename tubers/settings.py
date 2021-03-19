@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'a4&-ov639n-vbc=3=^&b5zpx%8q%uiw8ju1g-sw6e%l@vt3eq8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','https://ytubersapp.herokuapp.com/']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -152,6 +152,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 SITE_ID = 1
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
